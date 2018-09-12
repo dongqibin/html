@@ -1,0 +1,19 @@
+{
+  "name": "dongqibin/html",
+  "description": "自己写的html",
+  "type":"library",
+  "keywords":["html","form"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "dqb12315",
+      "email": "1605769464@qq.com"
+    }
+  ],
+  
+  "autoload": {
+    "psr-4": {
+      "dongqibin\\html\\": "src"
+    }
+  }
+}
