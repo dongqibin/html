@@ -7,7 +7,7 @@
  * Time: 16:11
  */
 
-namespace dongqibin\html\form;
+namespace dongqibin\html\form\base;
 
 
 class DataDefault

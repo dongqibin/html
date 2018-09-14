@@ -9,8 +9,8 @@
 
 namespace dongqibin\html\form;
 
-use dongqibin\html\form\DataDefault;
-use dongqibin\html\form\InputBuild;
+use dongqibin\html\form\base\DataDefault;
+use dongqibin\html\form\base\InputBuild;
 
 class Form
 {
