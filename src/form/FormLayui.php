@@ -189,7 +189,7 @@ class FormLayui
         $ext['lay-verify'] = $verify;
         if(empty($ext['class'])) $ext['class']="layui-textarea";
 
-        $input = $this->getForm()->field($name, $value)->text($ext);
+        $input = $this->getForm()->field($name, $value)->textarea($ext);
 
         $html = $this->getLayuiForm()->item(function() use($title, $is_required, $input) {
             return $this->getLayuiForm()->getLabel($title, $is_required)
