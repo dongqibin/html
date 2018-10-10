@@ -183,7 +183,7 @@ class FormLayui
      * @return string
      */
     public function textarea($title,$name,$is_required=false,$verify='',$value=false,$ext=[]) {
-        $ext['placeholder'] = $this->_getPlaceholder($title) . $this->clues;
+        $ext['placeholder'] = $this->_getPlaceholder($title) .', '. $this->clues;
         $ext['cols'] = 80;
         $ext['rows'] = 5;
         $ext['lay-verify'] = $verify;
