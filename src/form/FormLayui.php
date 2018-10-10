@@ -69,6 +69,7 @@ class FormLayui
         $clues = $this->_getClues();
 
         //表单属性,合成表单
+        $verify = empty($verify) ? 'lengthCheck30' : $verify . '|lengthCheck30';
         $ext = $this->_getconvExtMerge($ext, $verify, $title);
         $input = $this->getForm()->field($name,$value)->text($ext);
 
@@ -186,7 +187,7 @@ class FormLayui
         $ext['placeholder'] = $this->_getPlaceholder($title) .', '. $this->clues;
         $ext['cols'] = 80;
         $ext['rows'] = 5;
-        $ext['lay-verify'] = $verify;
+        $ext['lay-verify'] = empty($verify) ? 'lengthCheck120' : $verify . '|lengthCheck120';
         if(empty($ext['class'])) $ext['class']="layui-textarea";
 
         $input = $this->getForm()->field($name, $value)->textarea($ext);
