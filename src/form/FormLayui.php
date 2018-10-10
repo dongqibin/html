@@ -397,7 +397,7 @@ class FormLayui
      * @return $this
      */
     public function setClues($clues) {
-        $this->clues = $cules;
+        $this->clues = $clues;
         return $this;
     }
 
