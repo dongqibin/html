@@ -183,7 +183,7 @@ class FormLayui
      * @return string
      */
     public function textarea($title,$name,$is_required=false,$verify='',$value=false,$ext=[]) {
-        $ext['placeholder'] = $this->_getPlaceholder($title) . $this->_getClues();
+        $ext['placeholder'] = $this->_getPlaceholder($title) . $this->clues;
         $ext['cols'] = 80;
         $ext['rows'] = 5;
         $ext['lay-verify'] = $verify;
@@ -397,9 +397,18 @@ class FormLayui
      * @return $this
      */
     public function setClues($clues) {
-        $this->clues = $this->getLayuiForm()->setClues($clues);
+        $this->clues = $cules;
         return $this;
     }
+	
+	/**
+	 * 获取提示语
+	 * @return string
+	 */
+	public function getCules() {
+		if(!$this->clues) return $clues;
+		return $this->getLayuiForm()->setClues($this->clues);
+	}
 
     /**
      * 设置长度限制提示语
