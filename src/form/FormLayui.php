@@ -400,15 +400,6 @@ class FormLayui
         $this->clues = $cules;
         return $this;
     }
-	
-	/**
-	 * 获取提示语
-	 * @return string
-	 */
-	public function getCules() {
-		if(!$this->clues) return $clues;
-		return $this->getLayuiForm()->setClues($this->clues);
-	}
 
     /**
      * 设置长度限制提示语
@@ -428,7 +419,7 @@ class FormLayui
      */
     private function _getClues() {
         if(!$this->clues) return $this->clues;
-        $clues = $this->clues;
+        $clues = $this->getLayuiForm()->setClues($this->clues);
         $this->clues = '';
         return $clues;
     }
