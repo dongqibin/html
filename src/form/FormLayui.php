@@ -470,8 +470,18 @@ class FormLayui
      * @return string
      */
     private function _getPlaceholder($title) {
+        if($this->Placeholder) {
+            $Placeholder = $this->Placeholder;
+            $this->Placeholder = '';
+            return $Placeholder;
+        }
         if(!$title) return '';
         return '请输入'.$title;
+    }
+
+    public function setPlaceholder($Placeholder) {
+        $this->Placeholder = $Placeholder;
+        return $this;
     }
 
     /**
