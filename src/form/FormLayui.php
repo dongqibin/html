@@ -26,7 +26,8 @@ class FormLayui
 
     public $data = [];
     public $html = ''; //表单html
-    public $clues = ''; //表单提示语
+    public $clues = ''; //表单外提示语
+	public $Placeholder = ''; //表单内提示语
 
     private $_newLine = "\r\n"; //换行符
 
