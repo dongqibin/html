@@ -188,7 +188,7 @@ class FormLayui
         $ext['placeholder'] = $this->_getPlaceholder($title) .', '. $this->clues;
         $ext['cols'] = 80;
         $ext['rows'] = 5;
-        $ext['lay-verify'] = empty($verify) ? 'lengthCheck120' : $verify . '|lengthCheck120';
+        $ext['lay-verify'] = empty($verify) ? 'lengthCheck120' : $verify;
         if(empty($ext['class'])) $ext['class']="layui-textarea";
 
         $input = $this->getForm()->field($name, $value)->textarea($ext);
