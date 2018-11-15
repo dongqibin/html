@@ -62,6 +62,15 @@ class Form
         return $this->inputBuild->hidden($ext);
     }
 
+	/**
+     * hidden
+     * @param array $ext
+     * @return string
+     */
+    public function file($ext) {
+        return $this->inputBuild->file($ext);
+    }
+
     /**
      * textarea
      * @param array $ext

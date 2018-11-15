@@ -54,6 +54,17 @@ class FormLayui
         return $this->getForm()->field($name,$value)->hidden($ext);
     }
 
+	/**
+     * 文件上传表单
+     * @param $name
+     * @param bool $value
+     * @param array $ext
+     * @return string
+     */
+    public function file($name, $ext=[]) {
+        return $this->getForm()->field($name,null)->file($ext);
+    }
+
     /**
      * text
      * @param $title

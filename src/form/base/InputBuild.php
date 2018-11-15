@@ -16,6 +16,7 @@ class InputBuild
     const TYPE_TEXT = 'text';
     const TYPE_PASSWORD = 'password';
     const TYPE_HIDDEN = 'hidden';
+    const TYPE_FILE = 'file';
     const TYPE_TEXTAREA = 'textarea';
     const TYPE_CHECKBOX = 'checkbox';
     const TYPE_SELECT = 'select';
@@ -70,6 +71,16 @@ class InputBuild
     public function hidden($ext=[]) {
         $this->type = self::TYPE_HIDDEN;
         return $this->_getInput($this->type,$ext);
+    }
+
+	/**
+     * hidden
+     * @param array $ext
+     * @return string
+     */
+    public function file($ext) {
+        $this->type = self::TYPE_FILE;
+        return $this->_getInput($this->type, $ext);
     }
 
     /**
