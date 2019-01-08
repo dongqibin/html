@@ -280,12 +280,12 @@ class FormLayui
      * @param bool $value
      * @return string
      */
-    public function radio($title,$name,$data,$is_required=false,$value=false) {
+    public function radio($title,$name,$data,$is_required=false,$value=false, $class='', $verify='') {
         $input = $this->getForm()->field($name, $value)->radio($data);
 
         $html = $this->getLayuiForm()->item(function() use($input, $title, $is_required) {
             return $this->getLayuiForm()->getLabel($title, $is_required)
-                . $this->getLayuiForm()->getLong($input)
+                . $this->getLayuiForm()->getLong($input, $class, $verify)
                 . $this->_getClues();
         });
 
