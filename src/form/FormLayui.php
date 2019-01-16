@@ -283,7 +283,7 @@ class FormLayui
     public function radio($title,$name,$data,$is_required=false,$value=false, $class='', $verify='') {
         $input = $this->getForm()->field($name, $value)->radio($data);
 
-        $html = $this->getLayuiForm()->item(function() use($input, $title, $is_required) {
+        $html = $this->getLayuiForm()->item(function() use($input, $title, $is_required, $class, $verify) {
             return $this->getLayuiForm()->getLabel($title, $is_required)
                 . $this->getLayuiForm()->getLong($input, $class, $verify)
                 . $this->_getClues();
