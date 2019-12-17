@@ -50,6 +50,7 @@ class Form
      * @return string
      */
     public function password($ext=[]) {
+        $ext['autocomplete'] = 'off';
         return $this->inputBuild->password($ext);
     }
 
